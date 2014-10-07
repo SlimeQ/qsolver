@@ -3,6 +3,7 @@ qsolver
 
 homework project to solve quadratic equations
 
+
 quadratic equations take the form of
 ax^2 + bx + c = 0
 
@@ -17,6 +18,9 @@ the quadratic formula takes the form of:
 
 It is also possible for an equation to have imaginary roots, however we
 will not cover this.
+
+Our program will have to return single-precision (float) answers when given
+a, b and c.
 
 caveats:
 some limitations on the upper and lower bounds. for example,
