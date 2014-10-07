@@ -1,0 +1,6 @@
+This directory will hold all the various C programs testing
+the manipulations of floats. These tests will focus on how
+best to handle floats, and precision vs accuraccy.
+
+examples:
+.1 + .1 + .1 != .3
