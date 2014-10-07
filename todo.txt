@@ -1,0 +1,8 @@
+TODO LIST:
+
+experiment with IEEE floating point standards
+set up makefiles for the basic structure
+write a basic quadratic solver
+add unit tests
+add documentation and doc generation (doxygen?)
+
