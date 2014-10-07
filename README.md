@@ -17,3 +17,8 @@ the quadratic formula takes the form of:
 
 It is also possible for an equation to have imaginary roots, however we
 will not cover this.
+
+caveats:
+some limitations on the upper and lower bounds. for example,
+b^2 - 4ac may be a number that can be held by a int. However, can b^2?
+We are free to manipulate the order that we handle math, if it is better.
