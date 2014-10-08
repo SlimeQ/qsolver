@@ -26,3 +26,5 @@ caveats:
 some limitations on the upper and lower bounds. for example,
 b^2 - 4ac may be a number that can be held by a int. However, can b^2?
 We are free to manipulate the order that we handle math, if it is better.
+
+I'm a test.  Ignore me; I should be gone soon.
