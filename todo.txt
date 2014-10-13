@@ -1,6 +1,10 @@
 TODO LIST:
 
-experiment with IEEE floating point standards
+write spikes
+ - experiment with IEEE floating point standards
+ - try different square root functions
+ - try different quadratic equation functions
+ - modularlize the main program into subsections (like io)
 set up makefiles for the basic structure
 write a basic quadratic solver
 add unit tests
