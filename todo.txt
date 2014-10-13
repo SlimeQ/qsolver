@@ -10,22 +10,14 @@ write a basic quadratic solver
 add unit tests
 	mock objects
 add documentation and doc generation (doxygen?)
-add spikes
-	test different sqrt functions
+write spikes
+	- experiment with IEEE floating point standards
+	- try different square root functions
 		make our own?
+	- try different quadratic equation functions
+	- modularlize the main program into subsections (like io)
 README files
 separate functions into seperate files
 	input
 	output
 	discriminant
-
-TODO LIST:
-write spikes
-- experiment with IEEE floating point standards
-- try different square root functions
-- try different quadratic equation functions
-- modularlize the main program into subsections (like io)
-set up makefiles for the basic structure
-write a basic quadratic solver
-add unit tests
-add documentation and doc generation (doxygen?)
