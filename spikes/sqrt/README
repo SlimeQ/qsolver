@@ -1,0 +1,6 @@
+This directory contains test programs for different square root functions. Speed is the primary factor to test.
+
+algorithms to test
+	math.h/sqrt()
+	brute force
+	anything else
