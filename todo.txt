@@ -1,0 +1,22 @@
+TODO LIST:
+
+set up makefiles for the basic structure
+write a basic quadratic solver
+add unit tests
+	mock objects
+add documentation and doc generation (doxygen?)
+write spikes
+	- experiment with IEEE floating point standards
+		infinites
+		machine epsilon <--- find this
+		what if you pass NAN to sqrt?
+		documentation for standard
+	- try different square root functions
+		make our own?
+	- try different quadratic equation functions
+	- modularlize the main program into subsections (like io)
+README files
+separate functions into seperate files
+	input
+	output
+	discriminant
