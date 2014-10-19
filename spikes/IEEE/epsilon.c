@@ -3,13 +3,13 @@
 int main() {
 
 	float i = 1;
-	float i_last = 0;
 
-	while (i != 0) {
-		i_last = i;
-		i /= 2;
-	}
-	printf("machine epsilon for floats is %.150f\n",i_last);
+	do {
+		i /= 2.0;
+
+	} while ((1.0 + i/2.0) != 1.0);
+
+	printf("machine epsilon for floats is %.50f\n",i);
 
 	return 0;
 
