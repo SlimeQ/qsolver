@@ -38,8 +38,8 @@ qsolve: qsolve_interface.o qsolve_roots.o qsolve_sqrt.o
 	${CC} -o qsolve qsolve_interface.o qsolve_roots.o qsolve_sqrt.o ${LIBS}
 
 test: t1 t2
-	t1
-	t2
+	./t1
+	./t2
 
 t1: t1.o qsolve_roots.o qsolve_sqrt.o cunit.o 
 	${CC} -o t1 t1.o qsolve_roots.o qsolve_sqrt.o cunit.o ${LIBS}
