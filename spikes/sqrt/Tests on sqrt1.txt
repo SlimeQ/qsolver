@@ -1,0 +1,7 @@
+X = 1 gives 1
+x = 2 gives 1.414216
+x = -1 gives -inf
+x = 0.1 gives 0.316228
+x = inf(1/0) gives -nan
+x = -inf(-1/0) gives -nan
+x = -nan(0/0) gives -nan
