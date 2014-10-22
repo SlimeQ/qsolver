@@ -16,3 +16,6 @@ typedef struct {
 
 // quadratic eqaution solver
 int qsolve_roots(Coef *coef, Root *root);
+
+float solve_neg(Coef *coef);
+float solve_pos(Coef *coef);
