@@ -28,7 +28,7 @@ coefs.a = 1.0;
 coefs.b = 2.0;
 coefs.c = 1.0;
 ret = qsolve_roots(&coefs, &roots);
-assert_eq("ret",ret,2);
+assert_eq("ret",ret,1);
 assert_feq("x1",roots.x1,-1.0);
 assert_feq("x2",roots.x2,-1.0);
 
