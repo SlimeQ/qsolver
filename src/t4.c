@@ -27,7 +27,7 @@ coefs.b = sqrt(DBL_MAX*1.001);
 coefs.c = 1.0;
 ret = qsolve_roots(&coefs, &roots);
 assert_eq("ret",ret,-4);
-printf("why is it the wrong return code q_q gonna push anyway\n")
+printf("why is it the wrong return code q_q gonna push anyway\n");
 
 // A good unit test, all is in order
 // (x - x1)*(x - x2) = 0
