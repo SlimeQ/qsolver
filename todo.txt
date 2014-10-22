@@ -14,7 +14,7 @@ write spikes
 	- try different square root functions
 		make our own?
 	- try different quadratic equation functions
-	- modularlize the main program into subsections (like io)
+modularlize the main program into subsections (like io)
 README files
 separate functions into seperate files
 	input
