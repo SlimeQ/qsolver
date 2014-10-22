@@ -8,6 +8,7 @@
 * This uses the qsolve_sqrt() which calls the system sqrt()
 */
 #include <stdlib.h>
+#include <math.h>
 #include "cunit.h"
 #include "qsolve_roots.h"
 
@@ -23,51 +24,33 @@ double  x1, x2;  // scratch variables
 // initialize the unit testing framework
 cunit_init();
 
-//  A good unit test!
-coefs.a = 1.0;
+//  a = 0, not a true qudratic. should return -1
+coefs.a = 0;
 coefs.b = 2.0;
 coefs.c = 1.0;
 ret = qsolve_roots(&coefs, &roots);
-assert_eq("ret",ret,1);
-assert_feq("x1",roots.x1,-1.0);
-assert_feq("x2",roots.x2,-1.0);
+assert_eq("ret",ret,-1);
 
-// A good unit test, all is in order
-// (x - x1)*(x - x2) = 0
-x1 = 3.1;
-x2 = 3.3;
-coefs.a = 1.0;
-coefs.b = -x1 + -x2;
-coefs.c = x1*x2;
+// d = b^2 - 4ac < 0; no real roots. should return -2
+coefs.a = 6.4;
+coefs.b = 5.0;
+coefs.c = 7.7;
 ret = qsolve_roots(&coefs, &roots);
-assert_eq("ret",ret,2);
-assert_feqrerr("x1",roots.x1, x2, 10.0*cunit_dmacheps );
-assert_feqrerr("x2",roots.x2, x1, 10.0*cunit_dmacheps );
+assert_eq("ret",ret,-2);
 
-// A good unit test allows for round off!
-// (x - x1)*(x - x2) = 0
-x1 = 3.1;
-x2 = 3.3;
-coefs.a = 1.0;
-coefs.b = -x1 + -x2;
-coefs.c = x1*x2;
+// NAN input; should return -3
+coefs.a = NAN;
+coefs.b = 2.0;
+coefs.c = 1.0;
 ret = qsolve_roots(&coefs, &roots);
-assert_eq("ret",ret,2);
-assert_feqrerr("x1",roots.x1, x2, 10.0*cunit_dmacheps );
-assert_feqrerr("x2",roots.x2, x1, 10.0*cunit_dmacheps );
+assert_eq("ret",ret,-3);
 
-// A "good" unit test, need to allow for round off!
-// qsolve_roots() passes this one. ;-)
-// This allows about one base 10 least significant digit of error
-// (x - x1)*(x - x2) = 0
-x1 = 3.1;
-x2 = 3.3;
-coefs.a = 1.0;
-coefs.b = -x1 + -x2;
-coefs.c = x1*x2;
+// INF input; should return -3
+coefs.a = 2.0;
+coefs.b = INF;
+coefs.c = 1.0;
 ret = qsolve_roots(&coefs, &roots);
-assert_eq("ret",ret,2);
-assert_feqrerr("x1",roots.x1, x2, 10.0*cunit_dmacheps );
-assert_feqrerr("x2",roots.x2, x1, 10.0*cunit_dmacheps );
+assert_eq("ret",ret,-3);
+
 exit(0);
 }
