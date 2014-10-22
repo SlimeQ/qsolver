@@ -23,7 +23,7 @@ double  x1, x2;  // scratch variables
 // initialize the unit testing framework
 cunit_init();
 
-//  A bad unit tet
+//  A good unit test!
 coefs.a = 1.0;
 coefs.b = 2.0;
 coefs.c = 1.0;
@@ -32,7 +32,7 @@ assert_eq("ret",ret,1);
 assert_feq("x1",roots.x1,-1.0);
 assert_feq("x2",roots.x2,-1.0);
 
-// A bad unit test, wrong order
+// A good unit test, all is in order
 // (x - x1)*(x - x2) = 0
 x1 = 3.1;
 x2 = 3.3;
@@ -41,10 +41,10 @@ coefs.b = -x1 + -x2;
 coefs.c = x1*x2;
 ret = qsolve_roots(&coefs, &roots);
 assert_eq("ret",ret,2);
-assert_feq("x1",roots.x1, x1);
-assert_feq("x2",roots.x2, x2);
+assert_feqrerr("x1",roots.x1, x2, 10.0*cunit_dmacheps );
+assert_feqrerr("x2",roots.x2, x1, 10.0*cunit_dmacheps );
 
-// A bad unit test, need to allow for round off!
+// A good unit test allows for round off!
 // (x - x1)*(x - x2) = 0
 x1 = 3.1;
 x2 = 3.3;
@@ -53,8 +53,8 @@ coefs.b = -x1 + -x2;
 coefs.c = x1*x2;
 ret = qsolve_roots(&coefs, &roots);
 assert_eq("ret",ret,2);
-assert_feq("x1",roots.x1, x2);
-assert_feq("x2",roots.x2, x1);
+assert_feqrerr("x1",roots.x1, x2, 10.0*cunit_dmacheps );
+assert_feqrerr("x2",roots.x2, x1, 10.0*cunit_dmacheps );
 
 // A "good" unit test, need to allow for round off!
 // qsolve_roots() passes this one. ;-)
