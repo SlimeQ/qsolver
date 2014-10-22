@@ -29,8 +29,8 @@ coefs.b = 2.0;
 coefs.c = 1.0;
 ret = qsolve_roots(&coefs, &roots);
 assert_eq("ret",ret,2);
-assert_feq("x1",roots.x1,-2.0);
-assert_feq("x2",roots.x2,-2.0);
+assert_feq("x1",roots.x1,-1.0);
+assert_feq("x2",roots.x2,-1.0);
 
 // A bad unit test, wrong order
 // (x - x1)*(x - x2) = 0
