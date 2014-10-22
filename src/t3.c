@@ -17,8 +17,6 @@ int main() {
 Coef    coefs;   // a, b and c for the quadratic eqaution
 Root    roots;   // Root struct with x1 and x1
 int ret;     // return value from qsolve_roots
-// double  a, b, c; // scratch variables
-double  x1, x2;  // scratch variables
 
 
 // initialize the unit testing framework
