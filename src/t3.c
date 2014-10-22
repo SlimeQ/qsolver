@@ -47,7 +47,7 @@ assert_eq("ret",ret,-3);
 
 // INF input; should return -3
 coefs.a = 2.0;
-coefs.b = INF;
+coefs.b = INFINITY;
 coefs.c = 1.0;
 ret = qsolve_roots(&coefs, &roots);
 assert_eq("ret",ret,-3);
