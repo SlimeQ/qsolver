@@ -12,7 +12,6 @@
 //
 #include <stdio.h>
 #include <math.h>
-#include <stdlib.h>
 #include "qsolve_roots.h"
 #include "qsolve_sqrt.h"
 
@@ -43,12 +42,12 @@ if(d < 0.0) { // No real roots
   return -2;
 }
 
-if (abs(coef->a) == INFINITY ||
-    abs(coef->b) == INFINITY ||
-    abs(coef->c) == INFINITY ||
-    abs(coef->a) == NAN ||
-    abs(coef->b) == NAN ||
-    abs(coef->c) == NAN ) {
+if (isinf(coef->a) ||
+    isinf(coef->b) ||
+    isinf(coef->c) ||
+    isnan(coef->a) ||
+    isnan(coef->b) ||
+    isnan(coef->c)) {
 
     return -3;
 }
@@ -64,10 +63,10 @@ sqrtd = qsolve_sqrt(d);
 root->x1 = (-b + sqrtd)/(2.0*a);
 root->x2 = (-b - sqrtd)/(2.0*a);
 
-if (abs(root->x1) == INFINITY ||
-    abs(root->x2) == INFINITY ||
-    abs(root->x1) == NAN ||
-    abs(root->x2) == NAN) {
+if (isinf(root->x1) ||
+    isinf(root->x2) ||
+    isnan(root->x1) ||
+    isnan(root->x2)) {
 
     return -4;
 }
