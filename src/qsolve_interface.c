@@ -46,16 +46,15 @@ while(1) {
      exit(1);
     }
     scanf("%*[^\n]");
-    if(strncmp(response, "Y", 3) == 0) {
+	scanf("%*1[\n]");
+    if(!strncmp(response, "Y", 3)) {
 	break;
-    } else if(strncmp(response, "N", 3) == 0) {
+    } else if(!strncmp(response, "N", 3)) {
       exit(0);
     } else {
       fprintf(stderr,"Input error: response must be a single character: Y or N\n"); 
     }
-    scanf("%*1[\n]");
   }
-  scanf("%*1[\n]");
   printf("Input a b c :" );
   if(fgets(linein.str, linein.max, stdin) == NULL) {
      fprintf(stderr,"Input error: can not read from stdin\n");
@@ -66,7 +65,7 @@ while(1) {
     continue; 
   } else {
     
-    switch (qs = qsolve_roots(&coef,&root))  {
+    switch (qs = qsolve_roots(&coef, &root))  {
     case -2: // No real roots
              printf("No real roots\n");
              break;
