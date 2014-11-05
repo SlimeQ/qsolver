@@ -1,10 +1,7 @@
-// qsolve_interface.c
+// A fixed version of qsolve_interface.c
 // The main and io for qsolve.
 // This should likely be broked done into seperate modules viz 
 // the three level design to improve unit testing.S
-//
-// MY BAD. These comments really need an example and notes on how it should run,
-// as the return values it provides!
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -38,7 +35,6 @@ if( (linein.str = malloc(NLINE)) == NULL)  {
 }
 linein.len=0;
 linein.code=-1;
-//linein.str= '\0';	This caused a segfault.
 
 printf("Quadratic Equation Solver, Ver 1.01\nFinds real roots of a quadratic equation.\n");
 
@@ -69,8 +65,8 @@ while(1) {
     fprintf(stderr,"Input error: a b and c must be real numbers,\n  example: 1.0  2.2  4.4\n");
     continue; 
   } else {
-    // make qs = qsolve_roots(&coef, &root) when ready
-    switch (qs=-2)  {
+    
+    switch (qs = qsolve_roots(&coef,&root))  {
     case -2: // No real roots
              printf("No real roots\n");
              break;
