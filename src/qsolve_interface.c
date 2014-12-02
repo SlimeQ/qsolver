@@ -1,7 +1,6 @@
+
 // A fixed version of qsolve_interface.c
 // The main and io for qsolve.
-// This should likely be broked done into seperate modules viz 
-// the three level design to improve unit testing.S
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -60,6 +59,8 @@ while(1) {
      fprintf(stderr,"Input error: can not read from stdin\n");
      exit(1);
   }
+  scanf("%*[^\n]");
+  scanf("%*1[\n]");
   if(validator_abc(&linein, &coef) != 0) {
     fprintf(stderr,"Input error: a b and c must be real numbers,\n  example: 1.0  2.2  4.4\n");
     continue; 
