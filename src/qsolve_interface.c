@@ -5,6 +5,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <ctype.h>
 #include "qsolve_roots.h"
 
 //X NLINE is the size of the char array str and the lenght of the longest legal user input line.
@@ -44,11 +45,12 @@ while(1) {
      fprintf(stderr,"Input error: can not read from stdin\n");
      exit(1);
     }
+
     scanf("%*[^\n]");
 	scanf("%*1[\n]");
-    if(!strncmp(response, "Y", 3)) {
+    if(toupper(response[0]) == (int)'Y') {
 	break;
-    } else if(!strncmp(response, "N", 3)) {
+    } else if(toupper(response[0]) == (int)'N') {
       exit(0);
     } else {
       fprintf(stderr,"Input error: response must be a single character: Y or N\n"); 
