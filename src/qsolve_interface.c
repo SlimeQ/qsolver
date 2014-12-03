@@ -61,8 +61,8 @@ while(1) {
      fprintf(stderr,"Input error: can not read from stdin\n");
      exit(1);
   }
-  scanf("%*[^\n]");
-  scanf("%*1[\n]");
+  // scanf("%*[^\n]");
+  // scanf("%*1[\n]");
   if(validator_abc(&linein, &coef) != 0) {
     fprintf(stderr,"Input error: a b and c must be real numbers,\n  example: 1.0  2.2  4.4\n");
     continue; 
@@ -76,10 +76,10 @@ while(1) {
              printf("Not a quadratic (a==0)\n");
              break;
     case 1:  // double real root
-             printf("Double real root %24.16f", root.x1);
+             printf("Double real root %24.16f\n", root.x1);
              break;
     case 2:  // two distinct roots
-             printf("Roots  %24.16f  %24.16f", root.x1, root.x2);
+             printf("Roots  %24.16f  %24.16f\n", root.x1, root.x2);
              break;
     default: fprintf(stderr,"System failure: quadratic solver error code=%d\n", qs);
              exit(1);
