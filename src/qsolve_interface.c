@@ -40,7 +40,7 @@ printf("Quadratic Equation Solver, Ver 1.01\nFinds real roots of a quadratic equ
 
 while(1) {
   while(1) {
-    printf("Do you want to solve a quadratic eqauation ax^2 + bx + c = 0 ? (Y/N):");
+    printf("Do you want to solve a quadratic equation ax^2 + bx + c = 0 ? (Y/N):");
     if(fgets(response, 2, stdin) == NULL) {
      fprintf(stderr,"Input error: can not read from stdin\n");
      exit(1);

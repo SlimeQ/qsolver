@@ -1,2 +1,5 @@
-the discriminant is -3.000000
-roots are -nan and -nan
+Quadratic Equation Solver, Ver 1.01
+Finds real roots of a quadratic equation.
+Do you want to solve a quadratic equation ax^2 + bx + c = 0 ? (Y/N):Input a b c :Double real root      -1.0000000000000000
+Do you want to solve a quadratic equation ax^2 + bx + c = 0 ? (Y/N):Input a b c :Roots        3.3000000000000078        3.0999999999999925
+Do you want to solve a quadratic equation ax^2 + bx + c = 0 ? (Y/N):
