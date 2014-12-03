@@ -42,6 +42,8 @@ test: t1 t2 t3 t4
 	./t2
 	./t3
 	./t4
+	./qsolve < f.in > f.out
+	diff f.out fok.out
 
 t1: t1.o qsolve_roots.o qsolve_sqrt.o cunit.o 
 	${CC} -o t1 t1.o qsolve_roots.o qsolve_sqrt.o cunit.o ${LIBS}
